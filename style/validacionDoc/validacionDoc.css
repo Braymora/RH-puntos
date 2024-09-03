@@ -1,0 +1,181 @@
+@import "../global.css";
+
+.contLog {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.contLog-login {
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 6px;
+    background: var(--color-tertiary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    padding: 10px;
+    width: 294px;
+}
+
+.contLog-login .contLog-login__logo {
+    padding: 4px;
+    margin: 20px 8px;
+    width: 100%;
+}
+
+.contLog-login .contLog-login__title {
+    color: var(--color-primary);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px 10px;
+    margin: 21px 0px;
+    text-align: center;
+}
+
+.contLog-login .contLog-login__descript {
+    color: var(--color-primary);
+    font-size: 16px;
+    padding: 0px 12px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.input-container {
+    position: relative;
+    margin: 16px auto;
+    width: 100%;
+}
+
+.input-container input[type="text"] {
+    background-color: transparent;
+    border-radius: 6px;
+    border: 1px solid var(--color-secondary);
+    font-size: 20px;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.input-container .label {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    color: var(--color-secondary);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input-container input[type="text"]:focus~.label,
+.input-container input[type="text"]:valid~.label {
+    top: -20px;
+    font-size: 16px;
+    color: var(--color-primary);
+}
+
+
+.input-container input[type="text"]:focus~.underline,
+.input-container input[type="text"]:valid~.underline {
+    transform: scaleX(1);
+}
+
+.BtnCon {
+    width: 140px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--btnBanck);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .5s;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+}
+
+.IconContainer {
+    position: absolute;
+    left: -50px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: .5s;
+}
+
+.icon {
+    border-radius: 1px;
+}
+
+.text {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-tertiary);
+    z-index: 1;
+    transition-duration: .5s;
+    font-size: 1.04em;
+    font-weight: 600;
+}
+
+.BtnCon:hover .IconContainer {
+    transform: translateX(58px);
+    border-radius: 40px;
+    transition-duration: .5s;
+}
+
+.BtnCon:hover .text {
+    transform: translate(10px, 0px);
+    transition-duration: .5s;
+}
+
+.BtnCon:active {
+    transform: scale(0.95);
+    transition-duration: .5s;
+}
+
+@media (min-width: 767px) {
+    .contLog-login {
+        height: 419px;
+        width: 359px;
+    }
+
+    .contLog-login .contLog-login__title {
+        font-size: 20px;
+    }
+
+    .contLog-login .contLog-login__descript {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contLog-login {
+        height: 440px;
+        width: 400px;
+    }
+
+    .contLog-login .contLog-login__title {
+        font-size: 24px;
+    }
+
+    .contLog-login .contLog-login__descript {
+        font-size: 18px;
+    }
+
+    .BtnCon {
+        width: 166px;
+    }
+}

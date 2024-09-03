@@ -1,0 +1,9 @@
+.inputGroup input.ciudad {
+    background-image: url('../../assets/icons/home.svg');
+    /* Ruta de tu imagen */
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    /* Ajusta la posición de la imagen */
+    padding-left: 48px !important;
+    /* Añade espacio a la izquierda para la imagen */
+}

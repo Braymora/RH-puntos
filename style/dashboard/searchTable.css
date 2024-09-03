@@ -1,0 +1,62 @@
+/* =================Btn search====================== */
+.cont-table__search {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: end;
+    padding: 12px 24px;
+}
+
+.input-container {
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.input {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 18px 16px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.input::placeholder {
+    color: transparent;
+}
+
+.input:focus::placeholder {
+    color: var(--color-quaternary);
+}
+
+.input:focus,
+.input:not(:placeholder-shown) {
+    background-color: var();
+    border: 1px solid var(--btnBanck);
+    width: 290px;
+    cursor: none;
+    padding: 18px 16px 18px 45px;
+}
+
+.icon {
+    position: absolute;
+    left: 0;
+    height: 45px;
+    width: 45px;
+    background-color: var(--color-tertiary);
+    border-radius: 99px;
+    z-index: -1;
+    fill: var(--btnBanck);
+    border: 1px solid var(--btnBanck);
+}
+
+.input:focus+.icon,
+.input:not(:placeholder-shown)+.icon {
+    z-index: 0;
+    background-color: transparent;
+    border: none;
+}

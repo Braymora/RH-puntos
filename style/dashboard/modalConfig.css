@@ -1,0 +1,152 @@
+@import url(../global.css);
+
+/*Efecto*/
+.modalmask {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalmask:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*Formato de la ventana*/
+.modalbox {
+    width: 50%;
+    position: relative;
+    padding: 5px 20px 13px 20px;
+    background: var(--color-tertiary);
+    border-radius: 3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+
+.modalbox h2 {
+    color: var(--btnBanck);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding: 18px;
+}
+
+.contentInfo {
+    display: flex;
+}
+
+.contentInfo .contentInfo-inputs {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.contentInfo img {
+    padding: 10px;
+    width: 300px;
+}
+
+/*Movimientos*/
+.movedown {
+    margin: 0 auto;
+}
+
+.modalmask:target .movedown {
+    margin: 10% auto;
+}
+
+.modalmask:target .rotate {
+    transform: rotate(360deg) scale(1, 1);
+    -webkit-transform: rotate(360deg) scale(1, 1);
+}
+
+.modalmask:target .resize {
+    width: 400px;
+    height: 200px;
+}
+
+/*Boton de cerrar*/
+.close {
+    box-shadow: var(--bxshadow);
+    border-radius: 3px;
+    color: var(--color-quaternary);
+    font-weight: bold;
+    line-height: 25px;
+    position: absolute;
+    right: 4px;
+    transition: all ease 0.8s;
+    text-align: center;
+    text-decoration: none;
+    top: 4px;
+    width: 24px;
+}
+
+.close:hover {
+    background: var(--btnBanck);
+    color: var(--color-tertiary);
+}
+
+/* ===========Inputs=========== */
+
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    min-width: 100%;
+    position: relative;
+}
+
+.inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 8px;
+    transition: all ease 0.8s;
+    width: 100%;
+}
+
+.inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: var(--color-quaternary);
+    transition: all ease 0.8s;
+}
+
+.inputGroup input:focus,
+.inputGroup input:valid {
+    border-color: var(--btnBanck);
+}
+
+.inputGroup input:focus~label,
+.inputGroup input:valid~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: var(--color-tertiary)
+}
+
+@media (max-width: 1024px) {
+    .modalbox {
+        width: 80%;
+    }
+}

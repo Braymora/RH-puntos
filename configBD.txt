@@ -1,0 +1,6 @@
+1. Abre el archivo php.ini en la carpeta de instalación de PHP
+2. Busca la línea que dice max_execution_time=120.
+3. Cambia el valor 120 a un número mayor, por ejemplo, 600. Esto permitirá que tus scripts se ejecuten durante 600 segundos (10 minutos) antes de que se detengan
+4. Guarda el archivo php.ini y reinicia tu servidor para que los cambios surtan efecto.
+5. buscar extension=gd si se encuntra (;extension=gd) dejarlo (extension=gd);
+5. buscar extension=zip si se encuntra (;extension=zip) dejarlo (extension=zip);

@@ -1,0 +1,12 @@
+-- Indices de la tabla `ordenes_servicios`
+--
+ALTER TABLE `ordenes_servicios`
+  ADD KEY `id_estadoOrden_anexo` (`id_estadoOrden_anexo`);
+
+--
+-- Filtros para la tabla `ordenes_servicios`
+--
+ALTER TABLE `ordenes_servicios`
+  ADD CONSTRAINT `ordenes_servicios_ibfk_2` FOREIGN KEY (`numero_contrato`) REFERENCES `contratos` (`numero_contrato`),
+  ADD CONSTRAINT `ordenes_servicios_ibfk_4` FOREIGN KEY (`id_estadoOrden`) REFERENCES `estado_ordenes` (`id_estadoOrden`);
+  ADD CONSTRAINT `ordenes_servicios_ibfk_5` FOREIGN KEY (`id_estadoOrden`) REFERENCES `estado_ordenes_anex` (`id_estadoOrden_anexo`);

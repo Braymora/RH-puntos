@@ -1,0 +1,245 @@
+@import "../global.css";
+
+/* =================Table orders====== */
+.table-containerOrdenes {
+    display: block;
+    overflow-y: auto;
+    margin: auto;
+    max-width: 1300px;
+    max-height: 600px;
+    padding: 20px;
+}
+
+.responsive-tableOrdenes {
+    border-collapse: collapse;
+    border: 1px solid var(--color-secondary);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.responsive-tableOrdenes th,
+.responsive-tableOrdenes td {
+    border-bottom: 1px solid var(--color-secondary);
+    padding: 10px;
+    text-align: center;
+
+}
+
+.pagination_tableOrdenes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination_tableOrdenes .page-linkOrdenes {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: var(--color-quaternary);
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+}
+
+.page-linkOrdenes.activeOrdenes {
+    background-color: var(--btnBanck);
+    color: var(--color-tertiary);
+    border: 1px solid var(--btnBanck);
+}
+
+
+
+/* ===========Frecuencia de puntos============ */
+
+select {
+    font-size: 16px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+/* Style the options */
+select option {
+    padding: 12px;
+}
+
+
+/* ============Btn Edit============ */
+.buttonEdit {
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.buttonEdit:hover {
+    box-shadow: .5px .5px 150px #252525;
+}
+
+.typeEdit::after {
+    content: "Editar";
+    height: 30px;
+    width: 80px;
+    background-color: var(--color-sixth);
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typeEdit::before {
+    content: url("../../assets/icons/edit.svg");
+    height: 30px;
+    width: 80px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typeEdit:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.typeEdit:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+
+/* ============Btn Ingresar puntos============ */
+.buttonInsert {
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.buttonInsert:hover {
+    box-shadow: .5px .5px 150px #252525;
+}
+
+.typeInsert::after {
+    content: "Ingresar";
+    height: 30px;
+    width: 80px;
+    background-color: var(--btnBanck);
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typeInsert::before {
+    content: url("../../assets/icons/edit.svg");
+    height: 30px;
+    width: 80px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typeInsert:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.typeInsert:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+
+/* Estilos para dispositivos pequeños (pantallas móviles) */
+@media screen and (max-width: 768px) {
+
+    .table-containerOrdenes {
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .input:focus {
+        background-color: var();
+        border: 1px solid var(--btnBanck);
+        width: 194px;
+        cursor: none;
+        padding: 18px 16px 18px 45px;
+    }
+
+    .responsive-tableOrdenes {
+        border: 0px;
+    }
+
+    .responsive-tableOrdenes thead {
+        display: none;
+    }
+
+    .responsive-tableOrdenes tr {
+        margin-bottom: 8px;
+        border-bottom: solid 1px var(--color-quaternary);
+        display: block;
+    }
+
+    .responsive-tableOrdenes th,
+    .responsive-tableOrdenes td {
+        font-size: 12px;
+    }
+
+    .responsive-tableOrdenes td {
+        display: block;
+        border-bottom: 1px solid var(--color-secondary);
+        text-align: right;
+    }
+
+    .responsive-tableOrdenes td:last-child {
+        border-bottom: none;
+    }
+
+    .responsive-tableOrdenes td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        float: left;
+    }
+
+   
+}

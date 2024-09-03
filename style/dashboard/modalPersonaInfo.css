@@ -1,0 +1,152 @@
+@import url(../global.css);
+
+/*Efecto*/
+.modalmaskTwo {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalmaskTwo:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*Formato de la ventana*/
+.modalboxTwo {
+    width: 60%;
+    position: relative;
+    padding: 5px 20px 13px 20px;
+    background: var(--color-tertiary);
+    border-radius: 3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+
+.modalboxTwo h2 {
+    color: var(--btnBanck);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding: 18px;
+}
+
+.contentInfoTwo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.contentInfoTwo img {
+    padding: 10px;
+    width: 200px;
+}
+
+.contentInfo-inputsTwo {
+    padding: 12px;
+    width: 80%;
+}
+
+.contentInfo-inputsTwo .contentInfo-inputsTwo__items {
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.contentInfo-inputsTwo .contentInfo-inputsTwo__items span {
+    font-size: 20px;
+    font-weight: 800;
+    margin-right: 12px;
+}
+
+
+.contentInfoTwo_profile {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+}
+
+.contentInfoTwo_profile p {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+/*Movimientos*/
+.movedownTwo {
+    margin: 0 auto;
+}
+
+.modalmaskTwo:target .movedownTwo {
+    margin: 10% auto;
+}
+
+
+/*Boton de cerrar*/
+.closeTwo {
+    box-shadow: var(--bxshadow);
+    border-radius: 3px;
+    color: var(--color-quaternary);
+    font-weight: bold;
+    line-height: 25px;
+    position: absolute;
+    right: 4px;
+    transition: all ease 0.8s;
+    text-align: center;
+    text-decoration: none;
+    top: 4px;
+    width: 24px;
+}
+
+.closeTwo:hover {
+    background: var(--btnBanck);
+    color: var(--color-tertiary);
+}
+
+
+
+@media (max-width: 768px) {
+    .modalmaskTwo:target .movedownTwo {
+        width: 300px;
+    }
+
+    .contentInfoTwo {
+        flex-direction: column;
+    }
+
+    .contentInfo-inputsTwo {
+        width: 100%;
+    }
+
+    .contentInfoTwo img {
+        width: 160px;
+    }
+
+    .contentInfo-inputsTwo .contentInfo-inputsTwo__items {
+        padding: 4px;
+    }
+
+    .contentInfo-inputsTwo .contentInfo-inputsTwo__items span {
+        font-size: 14px;
+        margin-right: 8px;
+    }
+
+    .contentInfo-inputsTwo .contentInfo-inputsTwo__items p {
+        font-size: 14px;
+    }
+}

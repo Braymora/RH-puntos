@@ -1,0 +1,15 @@
+
+
+@media (max-width: 1300px) {
+    body {
+        grid-template-columns: 18% 1fr;
+    }
+}
+
+@media (max-width: 910px) {
+    body {
+        grid-template-columns: 0% 1fr;
+        min-width: 320px; /* Ancho mínimo del body */
+    }
+}
+

@@ -1,0 +1,220 @@
+@import "../global.css";
+
+.nav {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--color-tertiary);
+    border-left: 10px solid var(--color-tertiary);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.nav.active {
+    width: 80px;
+}
+
+.nav .navconLine {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.nav .navconLine .navTitle {
+    color: var(--btnBanck);
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 12px;
+    padding: 20px 8px;
+    text-align: center;
+}
+
+.nav .navconLine .navLine {
+    width: 80%;
+    border: solid 1px var(--btnBanck);
+}
+
+.nav .navList {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navList .navList-items {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 8px 0px;
+    padding: 10px 10px;
+    transition: ease all 1s;
+}
+
+
+
+.navList .navList-items a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--btnBanck);
+    font-size: 20px;
+}
+
+.navList-items:hover {
+    background-color: var(--color-quaternary);
+}
+
+.navList-items:hover a {
+    color: var(--color-tertiary);
+}
+
+.navList-items img {
+    height: 24px;
+    margin-right: 10px;
+    width: 24px;
+}
+
+/* ========================opciones Gestion========================= */
+.navList .navList-items .opmenuGestion {
+    cursor: pointer;
+    margin-left: 14px;
+    width: 18px;
+}
+
+
+.navList .opcionesGestion {
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.opcionesGestion .navList-itemsListGestion {
+    background-color: var(--color-tertiary);
+    border-radius: 4px;
+    box-shadow: var(--bxshadow);
+    display: none;
+    top: 36px;
+    left: 84px;
+    padding: 8px;
+    position: absolute;
+    transition: opacity 0.3s ease;
+    width: 200px;
+    z-index: 1;
+}
+
+.opcionesGestion .navList-itemsListGestion .navList-itemsList__itemsGestion {
+    display: flex;
+    padding: 10px 10px;
+    transition: ease all 1s;
+}
+
+.opcionesGestion .navList-itemsListGestion .navList-itemsList__itemsGestion a {
+    color: var(--color-quaternary);
+    transition: ease all 1s;
+}
+
+.opcionesGestion .navList-itemsListGestion .navList-itemsList__itemsGestion:hover {
+    background-color: var(--color-quaternary);
+}
+
+.opcionesGestion .navList-itemsListGestion .navList-itemsList__itemsGestion:hover a {
+    color: var(--color-tertiary);
+}
+
+
+
+/* ============opciones============= */
+.navList .navList-items .opmenu {
+    cursor: pointer;
+    margin-left: 14px;
+    width: 18px;
+}
+
+.navList .opciones {
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.opciones .navList-itemsList {
+    background-color: var(--color-tertiary);
+    border-radius: 4px;
+    box-shadow: var(--bxshadow);
+    display: none;
+    top: 48px;
+    left: 84px;
+    padding: 8px;
+    position: absolute;
+    transition: opacity 0.3s ease;
+    width: 200px;
+    z-index: 1;
+}
+
+.opciones .navList-itemsList .navList-itemsList__items {
+    display: flex;
+    padding: 10px 10px;
+    transition: ease all 1s;
+}
+
+.opciones .navList-itemsList .navList-itemsList__items a {
+    color: var(--color-quaternary);
+    transition: ease all 1s;
+}
+
+.opciones .navList-itemsList .navList-itemsList__items:hover {
+    background-color: var(--color-quaternary);
+}
+
+.opciones .navList-itemsList .navList-itemsList__items:hover a {
+    color: var(--color-tertiary);
+}
+
+
+
+
+
+/* ========Nav mobile======= */
+
+
+
+@media (max-width: 910px) {
+    .nav {
+        display: none;
+        top: 60px;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    .navList .navList-items {
+        font-size: 20px;
+    }
+
+    .opciones .navList-itemsList {
+        top: 62px;
+        left: 2px;
+        width: 98%;
+    }
+
+    .navList .navList-items {
+        width: 100%;
+    }
+
+    .navList-items img {
+        width: 64px;
+    }
+
+    .navList .navList-items a {
+        font-size: 30px;
+    }
+
+    .opcionesGestion .navList-itemsListGestion {
+        left: 2px;
+        top: 60px;
+        padding: 10px;
+        width: 98%;
+    }
+}

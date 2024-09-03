@@ -1,0 +1,131 @@
+@import "../global.css";
+
+.main {
+    transition: width 0.5s;
+}
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.main-dates {
+    position: relative;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    width: 100%;
+}
+
+.main-dateItems {
+    align-items: center;
+    background: var(--color-tertiary);
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    position: relative;
+    transition: all 0.8s;
+}
+
+.main-dateItems:hover {
+    transform: scale(1.04);
+}
+
+.main-dateItems .main_dateItems__info {
+    color: var(--btnBanck);
+    font-size: 1rem;
+    font-weight: 900;
+    padding: 16px;
+}
+
+
+.main-dateItems .main-dateItems__content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+
+.main-dateItems__content .main_dateItems__date {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 4px;
+    color: var(--color-sixth);
+}
+
+
+.contentCheck {
+    position: relative;
+}
+
+.main-dateItems__content .main_dateItems__icons {
+    margin-left: 8px;
+    padding: 4px;
+    width: 60px;
+
+}
+
+.main-dateItems .main-dateItems__content .check {
+    left: -6px;
+    position: absolute;
+    top: 34px;
+    width: 35px;
+}
+
+@media (max-width: 991px) {
+    .main {
+        width: 100%;
+        left: 0;
+    }
+
+    .main.active {
+        left: 300px;
+    }
+
+    .main-dateItems {
+        padding: 12px;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-dates {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+
+    .main-dateItems .main-dateItems__content {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-dates {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-dates {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+}

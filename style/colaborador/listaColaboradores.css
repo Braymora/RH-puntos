@@ -1,0 +1,871 @@
+@import "../global.css";
+
+.cont-contract {
+    padding: 12px;
+    width: 100%;
+    height: 100vh !important;
+    background: var(--color-tertiary);
+}
+
+main h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--btnBanck);
+    margin-left: 24px;
+}
+
+.main_table {
+    padding: 8px;
+}
+
+.cont-table {
+    background-color: var(--color-tertiary);
+    padding: 12px;
+    box-shadow: var(--bxshadow);
+    width: 100%;
+}
+
+
+
+
+/* =======================Btn import, new user======================== */
+.buttons {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--color-quinary);
+    cursor: pointer;
+    border: none;
+    flex: 1;
+    /* Para que los botones ocupen el ancho disponible */
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    padding: 12px;
+    transition: all ease 0.8s;
+}
+
+.buttons img {
+    padding: 2px;
+}
+
+.optionsButtonsExporte,
+.optionsButtonsImporte {
+    background: var(--color-sixth);
+}
+
+
+.optionsButtonsNewUser {
+    background: var(--btnBanck);
+}
+
+.optionsButtonsExporte:hover,
+.optionsButtonsImporte:hover,
+.optionsButtonsNewUser:hover {
+    background: var(--color-primary);
+}
+
+.cont-table__optionsItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.options-heading {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.dropdown {
+    margin: 0 10px;
+    position: relative;
+}
+
+.dropdown-toggle {
+    background-color: var(--color-tertiary);
+    border: 1px solid var(--color-quaternary);
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    background-color: var(--color-tertiary);
+    border: 1px solid var(--color-quaternary);
+    border-radius: 3px;
+    display: none;
+    left: 0;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    width: 100px;
+    z-index: 99999;
+}
+
+.dropdown-item {
+    padding: 9px 3px;
+    cursor: pointer;
+    transition: all ease 0.8s;
+}
+
+.dropdown-item:hover {
+    color: var(--color-quinary);
+    background: var(--color-primary);
+}
+
+/* importar excel */
+.formImport{
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 240px !important;
+}
+
+.custom-file-upload {
+    display: flex;
+    cursor: pointer;
+}
+
+.custom-file-upload__text {
+    color: var(--color-tertiary);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 4px;
+    text-align: center;
+}
+
+.Btnimpot {
+    border: none;
+    border-radius: 4px;
+    background: var(--btnBanck) !important;
+    color: var(--color-tertiary);
+    cursor: pointer;
+    padding: 4px;
+    margin: auto;
+    width: 80px;
+}
+/* Agrega este estilo para mantener el menú desplegado cuando se interactúa con él */
+
+/* =================Btn number of records====================== */
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+
+
+
+
+/* =================Table dashoboard====== */
+
+
+.table-container {
+    border: var(--border);
+    display: block;
+    margin: auto;
+    overflow-x: auto;
+    padding: 20px;
+    width: 100%;
+}
+
+.responsive-table {
+    border-collapse: collapse;
+    border: 1px solid var(--color-secondary);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+.responsive-table th,
+.responsive-table td {
+    text-align: center;
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    text-decoration: none;
+    color: var(--color-quaternary);
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+}
+
+.page-link.active {
+    background-color: var(--btnBanck);
+    color: var(--color-tertiary);
+    border: 1px solid var(--btnBanck);
+}
+
+
+
+/* ==================Modal Edit================== */
+
+.contentInfo-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Divide el formulario en 2 columnas */
+    gap: 20px;
+    /* Espacio entre las celdas */
+}
+
+/* Aplica estilos a los dos últimos elementos */
+.inputGroup:nth-last-child(-n+2) {
+    grid-column: 1 / 0;
+    /* Ocupa todas las columnas disponibles */
+}
+
+.inputGroup {
+    position: relative;
+}
+
+.contEdit_items {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modalEdit {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modalEdit.show .modal-contentEdit {
+    width: 90%;
+    transform: scale(1);
+}
+
+/* Estilos para el contenido del modal */
+.modal-contentEdit {
+    background-color: #fff;
+    width: 100%;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para el botón de cerrar */
+.close-btnEdit {
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: var(--bxshadow);
+    color: var(--color-quaternary);
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 24px;
+}
+
+/* Animaciones */
+.modalEdit.show {
+    display: block;
+    overflow: auto;
+}
+
+.contEdit {
+    padding: 12px;
+}
+
+.contEdit .contEdit_info {
+    align-items: center;
+    color: var(--btnBanck);
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+    justify-content: center;
+    padding: 14px;
+}
+
+.contEdit .contEdit_info img {
+    width: 40px;
+    padding: 4px;
+    margin-right: 14px;
+}
+
+
+
+
+
+
+/* ==================Modal import pdf================== */
+
+.modalPdf {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modalPdf.show .modal-contentPdf {
+    width: 90%;
+    transform: scale(1);
+}
+
+/* Estilos para el contenido del modal */
+.modal-contentPdf {
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para el botón de cerrar */
+.close-btnPdf {
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: var(--bxshadow);
+    color: var(--color-quaternary);
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 24px;
+}
+
+/* Animaciones */
+.modalPdf.show {
+    display: block !important;
+    overflow: auto !important;
+}
+
+
+.contPdf {
+    padding: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.contentPdf-inputs {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100%;
+}
+
+.contPdf .contPdf_info {
+    align-items: center !important;
+    color: var(--btnBanck) !important;
+    display: flex !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    justify-content: center !important;
+    padding: 14px !important;
+}
+
+.contPdf .contPdf_info img {
+    width: 40px !important;
+    padding: 4px !important;
+    margin-right: 14px !important;
+}
+
+.inputGroup {
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    font-family: var(--font) !important;
+    justify-content: center !important;
+}
+
+select {
+    appearance: none !important;
+    border: var(--border) !important;
+    border-radius: 8px !important;
+    background-color: var(--color-tertiary) !important;
+    color: var(--color-quaternary) !important;
+    font-size: 16px !important;
+    padding: 10px !important;
+    width: 100% !important;
+}
+
+select:focus {
+    outline: none !important;
+    border-color: var(--btnBanck) !important;
+    /* Cambia el color del borde cuando el elemento está enfocado */
+}
+
+select.cecoColOrden {
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 46px;
+}
+
+
+
+/* =============Btn save modal============= */
+
+.BtnConEdit {
+    align-items: center;
+    background-color: var(--btnBanck) !important;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition-duration: .5s;
+    width: 200px;
+}
+
+
+.IconContainer_Edit {
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    height: 28px;
+    left: -50px;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    transition-duration: .5s;
+    width: 28px;
+    z-index: 2;
+}
+
+.IconContainer_Edit img {
+    height: 100%;
+    width: 100%;
+}
+
+.text {
+    align-items: center;
+    color: var(--color-tertiary);
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    height: 100%;
+    justify-content: center;
+    transition-duration: .5s;
+    width: fit-content;
+}
+
+.BtnConEdit:hover .IconContainer_Edit {
+    border-radius: 40px;
+    transition-duration: .5s;
+    transform: translateX(58px);
+}
+
+.BtnConEdit:hover .text {
+    transform: translate(10px, 0px);
+    transition-duration: .5s;
+}
+
+.BtnConEdit:active {
+    transform: scale(0.95);
+    transition-duration: .5s;
+}
+
+/* ==================Boton guardar=============== */
+.BtnCon {
+    align-items: center;
+    border-radius: 6px;
+    background-color: var(--btnBanck) !important;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    cursor: pointer;
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition-duration: .5s;
+    top: 10px;
+    width: 200px;
+}
+
+.IconContainer {
+    position: absolute;
+    left: -50px;
+    width: 26px;
+    height: 26px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: .5s;
+}
+
+
+/* ========================Btn Edit user============================ */
+
+.buttonEdit {
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.buttonEdit:hover {
+    box-shadow: .5px .5px 150px #252525;
+}
+
+.typeEditar::after {
+    content: "Editar";
+    height: 30px;
+    width: 80px;
+    background-color: var(--color-sixth);
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typeEditar::before {
+    content: url("../../assets/icons/edit-3.svg");
+    height: 30px;
+    width: 80px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 6%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typeEditar:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.typeEditar:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+
+/* ========================Btn import PDF service============================ */
+
+.buttonPdf {
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.buttonPdf:hover {
+    box-shadow: .5px .5px 150px #252525;
+}
+
+.typePdf::after {
+    content: "PDF";
+    height: 30px;
+    width: 80px;
+    background-color: #e74c3c;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typePdf::before {
+    content: url("../../assets/icons/upload.svg");
+    height: 30px;
+    width: 80px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 6%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typePdf:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.typePdf:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+/* ============icons impor pdf============== */
+
+.file-upload {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px #ccc;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-upload:hover {
+    background-color: #eee;
+}
+
+.file-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.file-input {
+    display: none;
+}
+
+.pdf-preview {
+    margin-top: 20px;
+    display: none;
+}
+
+.pdf-preview embed {
+    width: 100%;
+    height: 500px;
+}
+
+.activo {
+    background-color: green;
+    border-radius: 4px;
+    color: white;
+    padding: 4px;
+    display: inline-block;
+}
+
+.inactivo {
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+    padding: 4px;
+    display: inline-block;
+}
+
+
+/* Estilos para dispositivos pequeños (pantallas móviles) */
+@media screen and (max-width: 768px) {
+
+    .cont-table__options {
+        width: 100%;
+    }
+
+    .cont-table__options {
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+    .cont-table__optionsButtons {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+        padding: 0px 8px;
+        width: 100%;
+    }
+
+    .input:focus {
+        background-color: var();
+        border: 1px solid var(--btnBanck);
+        width: 194px;
+        cursor: none;
+        padding: 18px 16px 18px 45px;
+    }
+
+    .responsive-table {
+        border: 0px;
+        width: 100%;
+    }
+
+    .responsive-table thead {
+        display: none;
+    }
+
+    .responsive-table tr {
+        margin-bottom: 8px;
+        border-bottom: solid 1px var(--color-quaternary);
+        display: block;
+    }
+
+    .responsive-table th,
+    .responsive-table td {
+        font-size: 12px;
+    }
+
+    .responsive-table td {
+        display: block;
+        border-bottom: 1px solid var(--color-secondary);
+        text-align: right;
+    }
+
+    .responsive-table td:last-child {
+        border-bottom: none;
+    }
+
+    .responsive-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        float: left;
+    }
+
+    .btnDetails {
+        font-size: 14px;
+        float: right;
+        height: 1.5em;
+        margin-bottom: 12px;
+        width: 100px;
+    }
+
+    .btnDetails::before {
+        left: 13%;
+        width: 76%;
+    }
+
+    .btnDetails::after {
+        top: -5px;
+        left: 11%;
+        width: 79%;
+    }
+
+
+    /* ==================Modals================== */
+    @media (max-width: 768px) {
+        .contentInfo-inputs {
+            grid-template-columns: 1fr;
+            /* Cambia a una sola columna */
+        }
+    }
+
+    .modalEdit.show .modal-contentEdit {
+        width: 90%;
+    }
+
+    /* Estilos para el contenido del modal */
+    .modal-contentEdit {
+        padding: 10px;
+    }
+
+    /* Estilos para el botón de cerrar */
+    .close-btnEdit {
+        align-items: center;
+        border-radius: 3px;
+        box-shadow: var(--bxshadow);
+        color: var(--color-quaternary);
+        cursor: pointer;
+        display: flex;
+        height: 24px;
+        justify-content: center;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        width: 24px;
+    }
+
+    /* Animaciones */
+    .modalEdit.show {
+        display: block;
+    }
+
+    .contEdit {
+        padding: 12px;
+    }
+
+    .contEdit .contEdit_info {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .contEdit .contEdit_info img {
+        width: 40px;
+        padding: 4px;
+        margin-right: 14px;
+    }
+
+
+    .BtnConEdit {
+        height: 38px;
+        width: 120px;
+    }
+
+    .IconContainer_Edit {
+        height: 20px;
+    }
+
+
+}

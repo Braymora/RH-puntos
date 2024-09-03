@@ -1,0 +1,275 @@
+@import "../global.css";
+
+/* Estilos para el modal */
+.modalInsertPoints {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modalInsertPoints.show .modal-contentInsertPoints {
+    width: 460px;
+    transform: scale(1);
+}
+
+/* Estilos para el contenido del modal */
+.modal-contentInsertPoints {
+    background-color: #fff;
+    width: 100%;
+    max-width: 1400px;
+    margin: 48px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para el botón de cerrar */
+.close-btnInsertPoints {
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: var(--bxshadow);
+    color: var(--color-quaternary);
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 24px;
+}
+
+/* Animaciones */
+.modalInsertPoints.show {
+    display: block;
+}
+
+.contInsertPoints {
+    padding: 12px;
+}
+
+.contInsertPoints .contInsert_infoOrder {
+    align-items: center;
+    color: var(--btnBanck);
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+    justify-content: center;
+    padding: 14px;
+}
+
+.contInsertPoints .contInsert_infoOrder img {
+    width: 40px;
+    padding: 4px;
+    margin-right: 14px;
+}
+
+form.contInsert_itemsOrder {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form.contInsert_itemsOrder ul {
+    width: 100%;
+}
+
+form.contInsert_itemsOrder ul li {
+    align-items: center;
+    display: flex;
+    padding: 14px;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+form.contInsert_itemsOrder ul li p {
+    font-weight: bold;
+}
+
+form.contInsert_itemsOrder ul li input {
+    padding: 14px;
+    border-radius: 4px;
+    border: none;
+    border: solid 1px var(--color-quaternary);
+    outline: none;
+    width: 56%;
+}
+
+form.contInsert_itemsOrder ul li select {
+    padding: 14px;
+    border-radius: 4px;
+    border: none;
+    border: solid 1px var(--color-quaternary);
+    width: 70%;
+}
+
+form.contInsert_itemsOrder ul li select option {
+    padding: 14px;
+}
+
+
+/* =============Btn seva modal============= */
+
+.BtnConEdit {
+    align-items: center;
+    background-color: var(--btnBanck);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition-duration: .5s;
+    width: 200px;
+}
+
+
+.IconContainer_Edit {
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    height: 28px;
+    left: -50px;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    transition-duration: .5s;
+    width: 28px;
+    z-index: 2;
+}
+
+.IconContainer_Edit img {
+    height: 100%;
+    width: 100%;
+}
+
+.text {
+    align-items: center;
+    color: var(--color-tertiary);
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    height: 100%;
+    justify-content: center;
+    transition-duration: .5s;
+    width: fit-content;
+}
+
+.BtnConEdit:hover .IconContainer_Edit {
+    border-radius: 40px;
+    transition-duration: .5s;
+    transform: translateX(58px);
+}
+
+.BtnConEdit:hover .text {
+    transform: translate(10px, 0px);
+    transition-duration: .5s;
+}
+
+.BtnConEdit:active {
+    transform: scale(0.95);
+    transition-duration: .5s;
+}
+
+
+@media screen and (max-width: 768px) {
+    .modalInsertPoints.show .modal-contentInsertPoints {
+        width: 90%;
+    }
+
+    /* Estilos para el contenido del modal */
+    .modal-contentInsertPoints {
+        padding: 10px;
+    }
+
+    /* Estilos para el botón de cerrar */
+    .close-btnInsertPoints {
+        align-items: center;
+        border-radius: 3px;
+        box-shadow: var(--bxshadow);
+        color: var(--color-quaternary);
+        cursor: pointer;
+        display: flex;
+        height: 24px;
+        justify-content: center;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        width: 24px;
+    }
+
+    /* Animaciones */
+    .modalInsertPoints.show {
+        display: block;
+    }
+
+    .contInsertPoints {
+        padding: 12px;
+    }
+
+    .contInsertPoints .contInsert_infoOrder {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .contInsertPoints .contInsert_infoOrder img {
+        width: 40px;
+        padding: 4px;
+        margin-right: 14px;
+    }
+
+    form.contInsert_itemsOrder {
+        padding: 0px;
+    }
+
+
+    form.contInsert_itemsOrder ul {
+        width: 100%;
+    }
+
+    form.contInsert_itemsOrder ul li {
+        padding: 6px;
+        font-size: 16px;
+    }
+
+    form.contInsert_itemsOrder ul li p {
+        font-weight: bold;
+    }
+
+    form.contInsert_itemsOrder ul li input {
+        padding: 10px;
+    }
+
+    form.contInsert_itemsOrder ul li select {
+        padding: 8px;
+    }
+
+    form.contInsert_itemsOrder ul li select option {
+        font-size: 12px;
+    }
+
+    .BtnConEdit {
+        height: 38px;
+        width: 120px;
+    }
+
+    .IconContainer_Edit {
+        height: 20px;
+    }
+
+}

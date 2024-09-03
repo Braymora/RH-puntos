@@ -1,0 +1,99 @@
+@import "../global.css";
+
+/*Efecto*/
+.modalmasDetails {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalmasDetails:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*Formato de la ventana*/
+.modalboxDetails {
+    width: 90%;
+    height: auto;
+    position: relative;
+    padding: 5px 4px;
+    background: #fff;
+    border-radius: 3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+
+}
+
+/*Movimientos*/
+.movedowndetails {
+    margin: 0 auto;
+}
+
+.modalmasDetails:target .movedowndetails {
+    margin: 2% auto;
+}
+
+
+.modalmasDetails:target .resizeDetails {
+    width: 400px;
+    height: 200px;
+}
+
+/*Boton de cerrar*/
+.closeDetails {
+    box-shadow: var(--bxshadow);
+    border-radius: 3px;
+    color: var(--color-quaternary);
+    font-weight: bold;
+    line-height: 25px;
+    position: absolute;
+    right: 4px;
+    transition: all ease 0.8s;
+    text-align: center;
+    text-decoration: none;
+    top: 4px;
+    width: 24px;
+
+}
+
+.closeDetails:hover {
+    background: var(--btnBanck);
+    color: var(--color-tertiary);
+}
+
+
+@media (max-width: 768px) {
+    .table-containerdetails .table-container__info {
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    .cont-table__optionsButtonsImporte {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+    }
+
+    .pagination_tableDetails {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 24px;
+        justify-content: center;
+        align-items: center;
+    }
+}

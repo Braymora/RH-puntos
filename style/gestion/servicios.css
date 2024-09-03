@@ -1,0 +1,885 @@
+@import "../global.css";
+
+hr {
+    color: var(--color-quaternary);
+    width: 90%;
+    margin: 0px auto;
+}
+
+
+.contCreatecontract {
+    height: 300px;
+}
+
+.contCreatecontract-info {
+    align-items: center;
+    display: flex;
+    height: 40px;
+}
+
+.contCreatecontract-info .contCreatecontract-info__image {
+    height: 40px;
+    padding: 4px;
+}
+
+.contCreatecontract-info .contCreatecontract-info__title {
+    color: var(--color-quaternary);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+/* ===========Inputs=========== */
+
+.contentInfo-inputs {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.inputGroup {
+    font-family: var(--font);
+    margin: 1em 0 1em 0;
+    min-width: 100%;
+    position: relative;
+}
+
+.inputGroup input {
+    font-family: var(--font);
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: var(--border);
+    background-color: transparent;
+    border-radius: 8px;
+    transition: all ease 0.8s;
+    width: 100%;
+}
+
+.inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: var(--color-quaternary);
+    transition: all ease 0.8s;
+}
+
+.inputGroup input:focus,
+.inputGroup input:valid {
+    border-color: var(--btnBanck);
+}
+
+.inputGroup input:focus~label,
+.inputGroup input:valid~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: var(--color-tertiary)
+}
+
+.inputGroup p {
+    color: var(--color-quaternary);
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 80%;
+}
+
+
+select {
+    width: 100%;
+    padding: 0.8em;
+    border: var(--border);
+    border-radius: 4px;
+    background-color: var(--color-tertiary);
+    font-size: 16px;
+    color: var(--color-quaternary);
+    appearance: none;
+    outline: none;
+}
+
+textarea {
+    color: var(--color-quaternary);
+    background-color: var(--color-tertiary);
+    border: var(--border);
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: var(--font);
+    min-height: 100px;
+    outline: none;
+    padding: 10px;
+    resize: vertical;
+    width: 80%;
+}
+
+/* ==================Boton guardar============= */
+
+.BtnCon {
+    width: 160px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--btnBanck);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .5s;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+}
+
+.IconContainer {
+    position: absolute;
+    left: -50px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: .5s;
+}
+
+
+/* ==========Table=========== */
+.contCreatecontract,
+.main_table {
+    padding: 8px;
+}
+
+.contCreatecontract,
+.cont-table {
+    padding: 12px;
+    width: 100%;
+    height: auto;
+}
+
+
+.cont-table {
+    background: var(--color-tertiary);
+}
+
+
+.cont-table__options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont-table__optionsItems {
+    display: flex;
+}
+
+.cont-table__optionsButtons {
+    display: flex;
+    padding: 0px 8px;
+    flex-wrap: wrap;
+    /* Permitirá que los botones se colapsen en pantallas pequeñas */
+    gap: 10px;
+    /* Espacio entre los botones */
+}
+
+
+/* =======================Btn import, new user======================== */
+.buttons {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--color-quinary);
+    cursor: pointer;
+    border: none;
+    flex: 1;
+    /* Para que los botones ocupen el ancho disponible */
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    padding: 12px;
+    transition: all ease 0.8s;
+}
+
+.buttons img {
+    padding: 2px;
+}
+
+.optionsButtonsExporte {
+    background: var(--color-sixth);
+}
+
+
+.optionsButtonsExporte:hover {
+    background: var(--color-primary);
+}
+
+.cont-table__optionsItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ========number of pages in the table============ */
+
+.options-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.options-heading {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.dropdown {
+    margin: 0 10px;
+    position: relative;
+}
+
+.dropdown-toggle {
+    background-color: var(--color-tertiary);
+    border: var(--border);
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    background-color: var(--color-tertiary);
+    border: var(--border);
+    border-radius: 3px;
+    display: none;
+    left: 0;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    width: 100px;
+    z-index: 99999;
+}
+
+.dropdown-item {
+    padding: 9px 3px;
+    cursor: pointer;
+    transition: all ease 0.8s;
+}
+
+.dropdown-item:hover {
+    color: var(--color-quinary);
+    background: var(--color-primary);
+}
+
+/* Agrega este estilo para mantener el menú desplegado cuando se interactúa con él */
+
+/* =================Btn number of records====================== */
+.dropdown.active .dropdown-menu {
+    display: block;
+}
+
+
+
+
+/* =================Table dashoboard====== */
+.table-container {
+    display: block;
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+}
+
+.responsive-table {
+    border-collapse: collapse;
+    border: var(--border);
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.responsive-table th,
+.responsive-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: var(--border);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    text-decoration: none;
+    color: var(--color-quaternary);
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+}
+
+.page-link.active {
+    background-color: var(--btnBanck);
+    color: var(--color-tertiary);
+    border: 1px solid var(--btnBanck);
+}
+
+/* ========================Btn Edit orders============================ */
+.buttonEdit {
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.buttonEdit:hover {
+    box-shadow: .5px .5px 150px #252525;
+}
+
+.typeEditar::after {
+    content: "Editar";
+    height: 30px;
+    width: 80px;
+    background-color: var(--color-sixth);
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typeEditar::before {
+    content: url("../../assets/icons/edit-3.svg");
+    height: 30px;
+    width: 80px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typeEditar:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.typeEditar:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+
+/* ========================Btn Delete orders============================ */
+.buttonDelete {
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.buttonDelete:hover {
+    box-shadow: .5px .5px 150px #252525;
+}
+
+.typeDelete::after {
+    content: "Eliminar";
+    height: 30px;
+    width: 80px;
+    background-color: red;
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typeDelete::before {
+    content: url("../../assets/icons/trash.svg");
+    height: 30px;
+    width: 80px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.typeDelete:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.typeDelete:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+
+
+/* ==================Modal Edit================== */
+
+.contEdit_items {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modalEdit {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modalEdit.show .modal-contentEdit {
+    width: 460px;
+    transform: scale(1);
+}
+
+/* Estilos para el contenido del modal */
+.modal-contentEdit {
+    background-color: #fff;
+    width: 100%;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para el botón de cerrar */
+.close-btnEdit {
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: var(--bxshadow);
+    color: var(--color-quaternary);
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 24px;
+}
+
+/* Animaciones */
+.modalEdit.show {
+    display: block;
+}
+
+.contEdit {
+    padding: 12px;
+}
+
+.contEdit .contEdit_info {
+    align-items: center;
+    color: var(--btnBanck);
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+    justify-content: center;
+    padding: 14px;
+}
+
+.contEdit .contEdit_info img {
+    width: 40px;
+    padding: 4px;
+    margin-right: 14px;
+}
+
+
+
+
+/* =============Btn seva modal============= */
+
+.BtnConEdit {
+    align-items: center;
+    background-color: var(--btnBanck);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition-duration: .5s;
+    width: 200px;
+}
+
+
+.IconContainer_Edit {
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    height: 28px;
+    left: -50px;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    transition-duration: .5s;
+    width: 28px;
+    z-index: 2;
+}
+
+.IconContainer_Edit img {
+    height: 100%;
+    width: 100%;
+}
+
+.text {
+    align-items: center;
+    color: var(--color-tertiary);
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    height: 100%;
+    justify-content: center;
+    transition-duration: .5s;
+    width: fit-content;
+}
+
+.BtnConEdit:hover .IconContainer_Edit {
+    border-radius: 40px;
+    transition-duration: .5s;
+    transform: translateX(58px);
+}
+
+.BtnConEdit:hover .text {
+    transform: translate(10px, 0px);
+    transition-duration: .5s;
+}
+
+.BtnConEdit:active {
+    transform: scale(0.95);
+    transition-duration: .5s;
+}
+
+
+
+
+/* ==========Modal eliminar========== */
+/**modal eliminar ceco */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    align-items: center;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.modal-content .conbutton {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.conbutton button {
+    border-radius: 4px;
+    margin: 0px 12px;
+    padding: 12px;
+    width: 100px;
+}
+
+#deleteBtn {
+    color: white;
+    background-color: #ff0000;
+    transition: all 0.8s;
+}
+
+#deleteBtn:hover {
+    background-color: #737679;
+}
+
+#cancelBtn {
+    color: white;
+    background-color: #555555;
+    transition: all 0.8s;
+}
+
+#cancelBtn:hover {
+    color: white;
+    background-color: rgb(18, 51, 77);
+}
+
+
+@media screen and (max-width: 768px) {
+    .modalEdit.show .modal-contentEdit {
+        width: 90%;
+    }
+
+    /* Estilos para el contenido del modal */
+    .modal-contentEdit {
+        padding: 10px;
+    }
+
+    /* Estilos para el botón de cerrar */
+    .close-btnEdit {
+        align-items: center;
+        border-radius: 3px;
+        box-shadow: var(--bxshadow);
+        color: var(--color-quaternary);
+        cursor: pointer;
+        display: flex;
+        height: 24px;
+        justify-content: center;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        width: 24px;
+    }
+
+    /* Animaciones */
+    .modalEdit.show {
+        display: block;
+    }
+
+    .contEdit {
+        padding: 12px;
+    }
+
+    .contEdit .contEdit_info {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .contEdit .contEdit_info img {
+        width: 40px;
+        padding: 4px;
+        margin-right: 14px;
+    }
+
+
+    .BtnConEdit {
+        height: 38px;
+        width: 120px;
+    }
+
+    .IconContainer_Edit {
+        height: 20px;
+    }
+
+}
+
+
+/* Estilos para dispositivos pequeños (pantallas móviles) */
+@media screen and (max-width: 768px) {
+
+    .contCreatecontract {
+        height: auto;
+    }
+
+    .cont-table__options {
+        width: 100%;
+    }
+
+    .cont-table__options {
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .buttons {
+        width: 100%;
+    }
+
+    .cont-table__optionsButtons {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+        padding: 0px 8px;
+        width: 100%;
+    }
+
+    .input:focus {
+        background-color: var();
+        border: 1px solid var(--btnBanck);
+        width: 194px;
+        cursor: none;
+        padding: 18px 16px 18px 45px;
+    }
+
+    .responsive-table {
+        border: 0px;
+    }
+
+    .responsive-table thead {
+        display: none;
+    }
+
+    .responsive-table tr {
+        margin-bottom: 8px;
+        border-bottom: solid 1px var(--color-quaternary);
+        display: block;
+    }
+
+    .responsive-table th,
+    .responsive-table td {
+        font-size: 12px;
+    }
+
+    .responsive-table td {
+        display: block;
+        border-bottom: 1px solid var(--color-secondary);
+        text-align: right;
+    }
+
+    .responsive-table td:last-child {
+        border-bottom: none;
+    }
+
+    .responsive-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        float: left;
+    }
+
+    .btnDetails {
+        font-size: 14px;
+        float: right;
+        height: 1.5em;
+        margin-bottom: 12px;
+        width: 100px;
+    }
+
+    .btnDetails::before {
+        left: 13%;
+        width: 76%;
+    }
+
+    .btnDetails::after {
+        top: -5px;
+        left: 11%;
+        width: 79%;
+    }
+
+}
+
+
+@media screen and (min-width: 768px) {
+
+
+    .contentInfo-inputs {
+        display: grid;
+        grid-template-columns: 40% 40%;
+    }
+
+    .inputGroup input {
+        width: 80%;
+    }
+
+    select {
+        width: 80%;
+        padding: 0.8em;
+        background: var(--color-tertiary);
+        border: 2px solid rgb(200, 200, 200);
+        border-radius: 8px;
+        outline: none;
+    }
+
+    .inputGroup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inputGroup label {
+        left: 24px;
+    }
+
+}
+
+@media screen and (min-width: 139px) {
+    .inputGroup label {
+        left: 60px;
+    }
+}
+
+@media screen and (min-width: 1939px) {
+    .inputGroup label {
+        left: 60px;
+    }
+}

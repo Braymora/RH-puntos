@@ -1,0 +1,25 @@
+1. //Query
+
+DELIMITER $$
+
+CREATE EVENT IF NOT EXISTS transferirDatos
+ON SCHEDULE EVERY 24 HOUR
+STARTS CURRENT_TIMESTAMP
+DO
+BEGIN
+    INSERT INTO cantidad_puntos (cedula, nombre_colaborador, puntos_asignados, fecha_puntos, numero_orden, id_frecuencia)
+    SELECT cedula, nombre_colaborador, puntos_asignados, fecha_puntos, numero_orden, id_frecuencia
+    FROM temporal_servicios_puntos
+    WHERE TIMESTAMPDIFF(HOUR, fecha_puntos, NOW()) >= 24;
+
+    DELETE FROM temporal_servicios_puntos WHERE TIMESTAMPDIFF(HOUR, fecha_puntos, NOW()) >= 24;
+END $$
+
+DELIMITER ;
+
+
+2. //Activación de Eventos:
+SHOW VARIABLES LIKE 'event_scheduler';
+
+3. // 
+ SET GLOBAL event_scheduler = ON;

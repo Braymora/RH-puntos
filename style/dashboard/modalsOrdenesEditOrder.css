@@ -1,0 +1,275 @@
+@import "../global.css";
+
+/* Estilos para el modal */
+.modalEditOrder {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modalEditOrder.show .modal-contentEditOrder {
+    width: 460px;
+    transform: scale(1);
+}
+
+/* Estilos para el contenido del modal */
+.modal-contentEditOrder{
+    background-color: #fff;
+    width: 100%;
+    max-width: 1400px;
+    margin: 48px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para el botón de cerrar */
+.close-btnEditOrder {
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: var(--bxshadow);
+    color: var(--color-quaternary);
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    width: 24px;
+}
+
+/* Animaciones */
+.modalEditOrder.show {
+    display: block;
+}
+
+.contEditOrder {
+    padding: 12px;
+}
+
+.contEditOrder .contEdit_infoOrder {
+    align-items: center;
+    color: var(--btnBanck);
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+    justify-content: center;
+    padding: 14px;
+}
+
+.contEditOrder .contEdit_infoOrder img {
+    width: 40px;
+    padding: 4px;
+    margin-right: 14px;
+}
+
+form.contEdit_itemsOrder {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+form.contEdit_itemsOrder ul {
+    width: 100%;
+}
+
+form.contEdit_itemsOrder ul li {
+    align-items: center;
+    display: flex;
+    padding: 14px;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+form.contEdit_itemsOrder ul li p {
+    font-weight: bold;
+}
+
+form.contEdit_itemsOrder ul li input {
+    padding: 14px;
+    border-radius: 4px;
+    border: none;
+    border: solid 1px var(--color-quaternary);
+    outline: none;
+    width: 100%;
+}
+
+form.contEdit_itemsOrder ul li select {
+    padding: 14px;
+    border-radius: 4px;
+    border: none;
+    border: solid 1px var(--color-quaternary);
+    width: 70%;
+}
+
+form.contEdit_itemsOrder ul li select option {
+    padding: 14px;
+}
+
+
+/* =============Btn seva modal============= */
+
+.BtnConEditOrder {
+    align-items: center;
+    background-color: var(--btnBanck) !important;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition-duration: .5s;
+    width: 200px;
+}
+
+
+.IconContainer_EditOrder {
+    align-items: center;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    height: 28px;
+    left: -50px;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    transition-duration: .5s;
+    width: 28px;
+    z-index: 2;
+}
+
+.IconContainer_EditOrder img {
+    height: 100%;
+    width: 100%;
+}
+
+.text {
+    align-items: center;
+    color: var(--color-tertiary);
+    display: flex;
+    font-size: 12px;
+    font-weight: 600;
+    height: 100%;
+    justify-content: center;
+    transition-duration: .5s;
+    width: fit-content;
+}
+
+.BtnConEditOrder:hover .IconContainer_EditOrder {
+    border-radius: 40px;
+    transition-duration: .5s;
+    transform: translateX(58px);
+}
+
+.BtnConEditOrder:hover .text {
+    transform: translate(10px, 0px);
+    transition-duration: .5s;
+}
+
+.BtnConEditOrder:active {
+    transform: scale(0.95);
+    transition-duration: .5s;
+}
+
+
+@media screen and (max-width: 768px) {
+    .modalEditOrder.show .modal-contentEditOrder {
+        width: 90%;
+    }
+
+    /* Estilos para el contenido del modal */
+    .modal-contentEditOrder {
+        padding: 10px;
+    }
+
+    /* Estilos para el botón de cerrar */
+    .close-btnEditOrder {
+        align-items: center;
+        border-radius: 3px;
+        box-shadow: var(--bxshadow);
+        color: var(--color-quaternary);
+        cursor: pointer;
+        display: flex;
+        height: 24px;
+        justify-content: center;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        width: 24px;
+    }
+
+    /* Animaciones */
+    .modalEditOrder.show {
+        display: block;
+    }
+
+    .contEditOrder {
+        padding: 12px;
+    }
+
+    .contEditOrder .contEdit_infoOrder {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .contEditOrder .contEdit_infoOrder img {
+        width: 40px;
+        padding: 4px;
+        margin-right: 14px;
+    }
+
+    form.contEdit_itemsOrder {
+        padding: 0px;
+    }
+
+
+    form.contEdit_itemsOrder ul {
+        width: 100%;
+    }
+
+    form.contEdit_itemsOrder ul li {
+        padding: 6px;
+        font-size: 16px;
+    }
+
+    form.contEdit_itemsOrder ul li p {
+        font-weight: bold;
+    }
+
+    form.contEdit_itemsOrder ul li input {
+        padding: 10px;
+    }
+
+    form.contEdit_itemsOrder ul li select {
+        padding: 8px;
+    }
+
+    form.contEdit_itemsOrder ul li select option {
+        font-size: 12px;
+    }
+
+    .BtnConEditOrder {
+        height: 38px;
+        width: 120px;
+    }
+
+    .IconContainer_EditOrder {
+        height: 20px;
+    }
+
+}

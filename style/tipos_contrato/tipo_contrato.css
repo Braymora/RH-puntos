@@ -1,0 +1,9 @@
+.inputGroup input.tipo_contrato {
+    background-image: url('../../assets/icons/file-text.svg');
+    /* Ruta de tu imagen */
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    /* Ajusta la posición de la imagen */
+    padding-left: 48px !important;
+    /* Añade espacio a la izquierda para la imagen */
+}

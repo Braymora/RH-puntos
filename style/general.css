@@ -1,0 +1,47 @@
+@import 'global.css';
+@import 'dashboard/body.css';
+@import 'dashboard/btnModal.css';
+@import 'dashboard/dashboard.css';
+@import 'dashboard/header.css';
+@import 'dashboard/main.css';
+@import 'dashboard/modalConfig.css';
+@import 'dashboard/modalPersonaInfo.css';
+@import 'dashboard/tableDetails.css';
+@import 'dashboard/modalsIngresarPuntos.css';
+@import 'dashboard/modalsOrdenes.css';
+@import 'dashboard/modalsOrdenesEdit.css';
+@import 'dashboard/modalsOrdenesEditOrder.css'; 
+@import 'dashboard/nav.css';
+@import 'dashboard/table.css';
+@import 'dashboard/modalsDetails.css';
+@import 'dashboard/tableOrdenes.css';
+
+
+@import 'validacionDoc/validacionDoc.css';
+@import 'toast/alertToast.css';
+
+@import 'login/login.css';
+
+@import 'recoveryPassword/recoveryPassword.css';
+@import 'newPassword/newPassword.css';
+
+@import 'gestion/servicios.css'; 
+@import 'gestion/contrato.css';  
+
+@import 'crearUsuario/crearUsuario.css'; 
+
+@import 'historial/tableHistorial.css';
+
+
+@import 'colaborador/colaborador.css';
+@import 'colaborador/listaColaboradores.css';
+@import 'colaborador/modalImportarAnexo.css';
+
+@import 'particles/particles.css';
+
+@import 'proyectos/proyecto.css';
+
+@import 'cargo/cargo.css';
+
+@import 'tipos_contrato/tipo_contrato.css';
+

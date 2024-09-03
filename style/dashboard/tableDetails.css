@@ -1,0 +1,287 @@
+@import "../global.css";
+
+/* =================Table Details====== */
+
+.contDate {
+    display: flex;
+    padding: 4px;
+    width: 34rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.buttonReset {
+    align-items: center;
+    display: flex;
+    background: var(--btnBanck);
+    bottom: 12px;
+    border-radius: 4px;
+    height: 28px;
+    justify-content: center;
+    position: absolute;
+    right: 0px;
+    transition: all 0.8s;
+    width: 28px;
+}
+
+.buttonReset:hover{
+    background: var(--color-sixth);
+}
+
+.buttonReset img {
+    width: 14px;
+}
+
+.contDate-date {
+    padding: 4px;
+}
+
+.contDate-date__input {
+    padding: 4px;
+    width: 100%;
+    border: 1px solid var(--color-secondary) !important;
+    border-radius: 8px;
+    outline: none;
+}
+
+.table-containerdetails {
+    display: block;
+    margin: auto;
+    max-height: 1300px;
+    overflow-y: auto;
+    padding: 20px;
+    width: 100%;
+}
+
+
+.responsive-tableDetails {
+    border-collapse: collapse;
+    border: 1px solid var(--color-secondary);
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table-containerdetails .table-container__info {
+    font-size: 18px;
+    padding: 16px 32px;
+}
+
+
+.responsive-tableDetails th,
+.responsive-tableDetails td {
+    border-bottom: 1px solid var(--color-secondary);
+    padding: 10px;
+    text-align: center;
+}
+
+.pagination_tableDetails {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination_tableDetails .page-linkDetails {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: var(--color-quaternary);
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+}
+
+.pagination_tableDetails .page-linkDetails.activeDetails {
+    background-color: var(--btnBanck);
+    color: var(--color-tertiary);
+    border: 1px solid var(--btnBanck);
+}
+
+div.dataTables_wrapper {
+    position: relative;
+    max-height: 600px;
+}
+
+/* =======================Btn import Excel======================= */
+.cont-table__optionsButtonsImporte {
+    display: flex;
+    margin: 10px;
+    padding: 0px 8px;
+    width: 300px;
+}
+
+
+.optionsButtonsImporteOrdenes {
+    background: var(--color-sixth);
+}
+
+.optionsButtonsSaveOrdenes {
+    background: var(--btnBanck);
+}
+
+.optionsButtonsImporteOrdenes .buttons {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--color-quinary);
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    padding: 12px;
+    transition: all ease 0.8s;
+}
+
+.optionsButtonsSaveOrdenes .buttons {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--color-quinary);
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    padding: 12px;
+    transition: all ease 0.8s;
+}
+
+.optionsButtonsImporteOrdenes .buttons img {
+    padding: 2px;
+}
+
+.optionsButtonsSaveOrdenes .buttons img {
+    padding: 2px;
+}
+
+.optionsButtonsImporteOrdenes {
+    background: var(--color-sixth);
+}
+
+
+.optionsButtonsImporteOrdenes:hover {
+    background: var(--color-primary);
+}
+
+.optionsButtonsSaveOrdenes:hover {
+    background: var(--color-primary);
+}
+
+
+/* ============Btn guardar============ */
+
+
+.button {
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.button:hover {
+    box-shadow: .5px .5px 150px #252525;
+}
+
+.type2::after {
+    content: "Editar";
+    height: 30px;
+    width: 80px;
+    background-color: var(--color-sixth);
+    color: #fff;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(50px);
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.type2::before {
+    content: url("../../assets/icons/edit.svg");
+    height: 30px;
+    width: 80px;
+    background-color: #fff;
+    color: #008080;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translateY(0px) scale(1.2);
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.type2:hover::after {
+    transform: translateY(0) scale(1.2);
+}
+
+.type2:hover::before {
+    transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+
+/* Estilos para dispositivos pequeños (pantallas móviles) */
+@media screen and (max-width: 768px) {
+    .responsive-tableDetails {
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    .movedowndetails {
+        margin: 10% auto;
+        overflow-y: auto;
+    }
+
+
+    .responsive-tableDetails {
+        border: 0px;
+    }
+
+    .responsive-tableDetails thead {
+        display: none;
+    }
+
+    .responsive-tableDetails tr {
+        margin-bottom: 8px;
+        border-bottom: solid 1px var(--color-quaternary);
+        display: block;
+    }
+
+    .responsive-tableDetails th,
+    .responsive-tableDetails td {
+        font-size: 12px;
+    }
+
+    .responsive-tableDetails td {
+        display: block;
+        border-bottom: 1px solid var(--color-secondary);
+        text-align: right;
+    }
+
+    .responsive-tableDetails td:last-child {
+        border-bottom: none;
+    }
+
+    .responsive-tableDetails td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        float: left;
+    }
+
+    .optionsButtonsImporteOrdenes,
+    .optionsButtonsSaveOrdenes {
+        margin-bottom: 12px;
+    }
+}
